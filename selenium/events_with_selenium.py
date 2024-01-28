@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def get_upcoming_events(url):
-    driver = webdriver.Firefox()
+    driver = webdriver.PhantomJS('phantomjs')
     driver.get(url)
 
     events = driver.find_elements(by=By.XPATH, value='//ul[contains(@class, "list-recent-events")]/li')

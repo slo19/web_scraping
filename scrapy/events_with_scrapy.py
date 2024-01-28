@@ -16,7 +16,7 @@ class PythonEventsSpider(scrapy.Spider):
             self.found_events.append(event_details)
 
 if __name__ == "__main__":
-    process = CrawlerProcess({'LOG_LEVEL': 'ERROR'})
+    process = CrawlerProcess({'LOG_LEVEL': 'DEBUG'})
     process.crawl(PythonEventsSpider)
     spider = next(iter(process.crawlers)).spider
     process.start()
